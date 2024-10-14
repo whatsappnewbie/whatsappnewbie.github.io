@@ -11,13 +11,13 @@
     </head>
     <body>
         <div class="top-bar-neon">
-            <button onclick="window.location.href='https://whatsappnewbie.github.io/';">Home</button>
-            <button>Iniciante</button>
-            <button>Python</button>
-            <button class="active">C#</button>
-            <button>JavaScript</button>
-            <button>HTML</button>
-            <button>CSS</button>
+            <button onclick="window.location.href='https://whatsappnewbie.github.io/';"><span>Home</span></button>
+            <button><span>Iniciante</span></button>
+            <button><span>Python</span></button>
+            <button class="active"><span></span>C#</button>
+            <button><span>JavaScript</span></button>
+            <button><span>HTML</span></button>
+            <button><span>CSS</span></button>
         </div>
         <div class="main-content">
             <nav class="nav flex-column sidebar">
@@ -43,7 +43,7 @@
         </div>
 
         <script>
-            fetch("about.md")
+            fetch("texto.md")
                 .then((response) => response.text())
                 .then((data) => {
                     document.getElementById("content").innerHTML = data
