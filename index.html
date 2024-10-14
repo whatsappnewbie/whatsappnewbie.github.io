@@ -6,28 +6,52 @@
         <link rel="stylesheet" href="css/topbar.css" />
         <link rel="stylesheet" href="css/sidebar.css" />
         <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/estrutura.css" />
         <title>Csharp</title>
     </head>
     <body>
         <div class="top-bar-neon">
-            <button class="active">Home</button>
-            <button>Iniciante</button>
-            <button>Python</button>
-            <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/about';" >C#</button>
-            <button>JavaScript</button>
-            <button>HTML</button>
-            <button>CSS</button>
+            <button class="active" onclick="window.location.href='https://whatsappnewbie.github.io/';"><span>Home</span></button>
+            <button><span>Iniciante</span></button>
+            <button><span>Python</span></button>
+            <button ><span></span>C#</button>
+            <button><span>JavaScript</span></button>
+            <button><span>HTML</span></button>
+            <button><span>CSS</span></button>
         </div>
-        <nav>
+        <div class="main-content">
             <nav class="nav flex-column sidebar">
-                <button>Ide</button>
-                <button>Sobre C#</button>
-                <button>Cursos</button>
-                <button>Exemplos</button>
-                <button>Exercicios</button>
-                <button>Frameworks</button>
-                <button>Contribuintes</button>
+                <button class="active-side">Sobre C#</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/ide';">ide</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/cursos';">Cursos</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/exemplos';">
+                    Exemplos
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/exercicios';">
+                    Exercicios
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/frameworks';">
+                    Frameworks
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/contribuintes';">
+                    Contribuintes
+                </button>
             </nav>
-        </nav>
+            <div class="scrollable-content" id="content">
+                <!-- Conteúdo do arquivo .md será carregado aqui -->
+            </div>
+        </div>
+
+        <script>
+            fetch("texto.md")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("content").innerHTML = data
+                        .replace(/#/g, "<h1>")
+                        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                        .replace(/_(.*?)_/g, "<em>$1</em>");
+                })
+                .catch((error) => console.error("Erro ao carregar o arquivo .md:", error));
+        </script>
     </body>
 </html>
