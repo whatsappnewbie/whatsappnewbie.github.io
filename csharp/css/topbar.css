@@ -11,6 +11,7 @@
 
 .top-bar-neon button {
     background-color: #171111;
+    color: #ffffffff;
     transform: skew(-40deg);
     height: 36px;
     width: 100px;
