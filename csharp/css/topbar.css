@@ -26,7 +26,6 @@
     display: inline-block;
     transform: skew(40deg);
 }
-
 .top-bar-neon button:hover,
 button.active {
     color: #ff0000;
