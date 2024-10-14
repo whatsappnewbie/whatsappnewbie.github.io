@@ -32,7 +32,7 @@
     <li>Desenvolvimento de aplicativos desktop (Windows Forms, WPF).</li>
     <li>Desenvolvimento de aplicações web (ASP.NET).</li>
     <li>Desenvolvimento de jogos (Unity).</li>
-    <li>Aplicações móveis (Xamarin).</li>
+    <li>Aplicações móveis (MAUI e Desktop).</li>
     <li>Aplicações de console e serviços em nuvem (Azure).</li>
 </ul>
 
