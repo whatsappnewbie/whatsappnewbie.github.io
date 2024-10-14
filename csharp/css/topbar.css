@@ -1,0 +1,41 @@
+.top-bar-neon {
+    height: 50px;
+    top: 10px;
+    width: 100%;
+    background: #171111;
+    box-shadow: 0 0 20px #ff02c121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff02c125;
+}
+
+.top-bar-neon button {
+    background-color: #171111;
+    margin-left: 4px;
+    margin-right: 4px;
+    border: none;
+    color: #bcafd9ff;
+    transition:
+        box-shadow 0.6s ease,
+        transform 0.5s ease,
+        margin 0.5s ease;
+    border-radius: 5px;
+    box-shadow:
+        0 0 15px #ff02c100,
+        0 0 5px #ff02c168;
+}
+
+.top-bar-neon button:hover, button.active {
+    color: #ff0000;
+    box-shadow:
+        0 0 25px #ff0000,
+        0 0 10px #ff000080;
+    margin-left: 26px;
+    margin-right: 27px;
+}
+
+body {
+    background-color: #0a0a0a;
+    margin: 0;
+}
