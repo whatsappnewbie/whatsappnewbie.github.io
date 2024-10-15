@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/topbar.css" />
+        <link rel="stylesheet" href="css/sidebar.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/estrutura.css" />
+        <title>Csharp</title>
+    </head>
+    <body>
+        <div class="top-bar-neon">
+            <button class="active"><span>Home</span></button>
+            <button><span>Iniciante</span></button>
+            <button><span>Python</span></button>
+            <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/about';">
+                <span>C#</span>
+            </button>
+            <button><span>JavaScript</span></button>
+            <button><span>HTML</span></button>
+            <button><span>CSS</span></button>
+        </div>
+        <div class="main-content">
+            <!--
+            <nav class="nav flex-column sidebar">
+                <button>Sobre C#</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/ide';">ide</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/cursos';">Cursos</button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/exemplos';">
+                    Exemplos
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/exercicios';">
+                    Exercicios
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/frameworks';">
+                    Frameworks
+                </button>
+                <button onclick="window.location.href='https://whatsappnewbie.github.io/csharp/contribuintes';">
+                    Contribuintes
+                </button>
+            </nav>
+            -->
+            <div class="scrollable-content-home" id="content">
+                <!-- Conteúdo do arquivo .md será carregado aqui -->
+            </div>
+        </div>
+
+        <script>
+            fetch("welcome.md")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("content").innerHTML = data
+                        .replace(/#/g, "<h1>")
+                        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                        .replace(/_(.*?)_/g, "<em>$1</em>");
+                })
+                .catch((error) => console.error("Erro ao carregar o arquivo .md:", error));
+        </script>
+    </body>
+</html>
