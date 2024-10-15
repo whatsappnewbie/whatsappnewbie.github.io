@@ -1,0 +1,36 @@
+.sidebar {
+    top: 39px;
+    height: 100%;
+    position: fixed;
+    width: 150px;
+    background: #171111;
+    box-shadow: 0 0 20px #ff02c121;
+    border: 2px solid #ff02c125;
+}
+
+.sidebar button {
+    background-color: #171111;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: none;
+    color: #ffffffff;
+    /*font-size: 16px;*/
+    cursor: pointer;
+    transition:
+        box-shadow 0.6s ease,
+        transform 0.5s ease,
+        margin 0.5s ease;
+    border-radius: 1px;
+    box-shadow:
+        0 0 15px #ff02c100,
+        0 0 5px #ff02c168;
+}
+
+.sidebar button:hover, button.active-side {
+    color: #ff0000;
+    box-shadow:
+        0 0 25px #ff0000,
+        0 0 10px #ff000080;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}

@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.main-content {
+    display: flex;
+    flex: 1;
+}
+.scrollable-content {
+    overflow-y: auto;
+    padding: 20px;
+}
+.scrollable-content {
+    margin-left: 152px;
+    margin-top: 50px;
+}
+.scrollable-code{
+    margin-left: 152px;
+    margin-top: 50px;
+    
+    
+}
+.code{
+    border-radius: 12px;
+    font-size: 15px;
+}
